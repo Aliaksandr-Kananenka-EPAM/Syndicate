@@ -12,14 +12,14 @@ public class Function
     {
         return new CustomResponse
         {
-            StatusCode = 200,
-            Message = "Hello from Lambda"
+            statusCode = 200,
+            message = "Hello from Lambda"
         };
     }
 }
 
 public class CustomResponse
 {
-    public int StatusCode { get; set; }
-    public string Message { get; set; }
+    public int statusCode { get; set; }
+    public string message { get; set; }
 }
