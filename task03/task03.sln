@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dnapp", "dnapp", "{E80E732A-983F-4F93-BA28-5B40892BFBB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lambdas", "lambdas", "{5BE921A8-8C89-4DEE-B5ED-33FF74A1B91B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Function", "dnapp\lambdas\hello_world\Function.csproj", "{59E70705-0799-4897-B6CA-C7C7D0C50D0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59E70705-0799-4897-B6CA-C7C7D0C50D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59E70705-0799-4897-B6CA-C7C7D0C50D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59E70705-0799-4897-B6CA-C7C7D0C50D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59E70705-0799-4897-B6CA-C7C7D0C50D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BE921A8-8C89-4DEE-B5ED-33FF74A1B91B} = {E80E732A-983F-4F93-BA28-5B40892BFBB6}
+		{59E70705-0799-4897-B6CA-C7C7D0C50D0F} = {5BE921A8-8C89-4DEE-B5ED-33FF74A1B91B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B5440BB-31EA-4986-9C10-A058B090D69C}
+	EndGlobalSection
+EndGlobal
