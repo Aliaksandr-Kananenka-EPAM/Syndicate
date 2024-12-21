@@ -7,11 +7,5 @@
     ],
     "resource_type": "iam_role",
     "tags": {}
-  },
-  "async_queue": {
-    "region": "eu-central-1",
-    "fifo_queue": false,
-    "resource_type": "sqs_queue",
-    "visibility_timeout": 300
   }
 }

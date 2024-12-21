@@ -21,5 +21,17 @@
     },
     "resource_type": "iam_policy",
     "tags": {}
+  },
+  "async_queue": {
+    "region": "eu-central-1",
+    "fifo_queue": false,
+    "resource_type": "sqs_queue",
+    "visibility_timeout": 300
+  },
+  "lambda_topic": {
+    "resource_type": "sns_topic",
+    "region": "eu-central-1",
+    "event_sources": [],
+    "tags": {}
   }
 }
