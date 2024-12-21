@@ -29,8 +29,8 @@ public class Function
 
         var contentMap = new Dictionary<string, AttributeValue>
         {
-            { "name", new AttributeValue { S = request.Content.Name } },
-            { "surname", new AttributeValue { S = request.Content.Surname } }
+            { "name", GetStringAttributeValue(request.Content.Name) },
+            { "surname", GetStringAttributeValue(request.Content.Surname) }
         };
 
         var eventEntityToPut = new Dictionary<string, AttributeValue>
@@ -63,5 +63,15 @@ public class Function
             Body = JsonSerializer.Serialize(responseBody),
             Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
         };
+    }
+
+    private AttributeValue GetStringAttributeValue(string value)
+    {
+        if (value == null)
+        {
+            return new AttributeValue { NULL = true };
+        }
+
+        return new AttributeValue { S = value };
     }
 }
