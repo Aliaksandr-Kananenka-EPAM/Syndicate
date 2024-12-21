@@ -25,14 +25,20 @@ public class Function
         logger.LogInformation($"Incoming request: {JsonSerializer.Serialize(request)}");
 
         var eventId = Guid.NewGuid().ToString();
-        var createdAt = DateTime.UtcNow.ToString("o");
+        var createdAt = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
+
+        var contentMap = new Dictionary<string, AttributeValue>
+        {
+            { "name", new AttributeValue { S = request.Content.Name } },
+            { "surname", new AttributeValue { S = request.Content.Surname } }
+        };
 
         var eventEntityToPut = new Dictionary<string, AttributeValue>
         {
             { "id", new AttributeValue(eventId) },
             { "principalId", new AttributeValue { N = request.PrincipalId.ToString() } },
             { "createdAt", new AttributeValue(createdAt) },
-            { "body", new AttributeValue { S = JsonSerializer.Serialize(request.Content) } }
+            { "body", new AttributeValue { M = contentMap } }
         };
 
         var putItemRequest = new PutItemRequest
