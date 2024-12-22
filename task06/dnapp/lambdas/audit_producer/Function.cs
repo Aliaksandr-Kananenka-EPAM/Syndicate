@@ -13,7 +13,6 @@ namespace SimpleLambdaFunction;
 
 public class Function
 {
-    private static readonly string ConfigurationTableName = Environment.GetEnvironmentVariable("SOURCE_TABLE");
     private static readonly string AuditTableName = Environment.GetEnvironmentVariable("TARGET_TABLE");
     private static readonly AmazonDynamoDBClient _dbClient = new AmazonDynamoDBClient(RegionEndpoint.EUCentral1);
     private static ILambdaLogger _logger;

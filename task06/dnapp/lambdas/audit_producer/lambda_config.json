@@ -17,8 +17,7 @@
     }
   ],
   "env_variables": {
-    "TARGET_TABLE": "${target_table}",
-    "SOURCE_TABLE": "${source_table}"
+    "TARGET_TABLE": "${target_table}"
   },
   "publish_version": true,
   "alias": "${lambdas_alias_name}",
