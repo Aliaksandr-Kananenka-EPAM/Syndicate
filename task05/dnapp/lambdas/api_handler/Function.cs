@@ -16,7 +16,7 @@ namespace SimpleLambdaFunction;
 
 public class Function
 {
-    private const string EventsTableName = "cmtr-4b0b71a3-Events-test";
+    private static readonly string TableName = Environment.GetEnvironmentVariable("TARGET_TABLE");
     private static readonly AmazonDynamoDBClient _dbClient = new AmazonDynamoDBClient(RegionEndpoint.EUCentral1);
 
     public async Task<APIGatewayProxyResponse> FunctionHandler(Request request, ILambdaContext context)
@@ -43,7 +43,7 @@ public class Function
 
         var putItemRequest = new PutItemRequest
         {
-            TableName = EventsTableName,
+            TableName = TableName,
             Item = eventEntityToPut
         };
 
