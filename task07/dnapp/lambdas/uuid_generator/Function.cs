@@ -23,7 +23,7 @@ public class Function
             uuids.Add(Guid.NewGuid().ToString());
         }
 
-        var fileName = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ") + ".json";
+        var fileName = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss.fffZ");
         var content = new { ids = uuids };
         var jsonContent = JsonSerializer.Serialize(content);
 
